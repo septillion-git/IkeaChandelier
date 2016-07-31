@@ -1,0 +1,182 @@
+\hypertarget{group__CoreFunctions}{}\section{Core Libary Functions}
+\label{group__CoreFunctions}\index{Core Libary Functions@{Core Libary Functions}}
+
+
+These function are all prefixed with \char`\"{}\+Tlc.\char`\"{}.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__ReqVPRG__ENABLED}{Functions that Require V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED}
+\begin{DoxyCompactList}\small\item\em Functions that require V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED == 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__CoreFunctions_gaa42fdda37a43a13f49b00924d93eedd4}{Tlc5940\+::init} (uint16\+\_\+t initial\+Value=0)
+\begin{DoxyCompactList}\small\item\em Pin i/o and Timer setup. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_ga5e5acd62f0c91579694ed4cffd88bd76}{Tlc5940\+::clear} (void)
+\begin{DoxyCompactList}\small\item\em Clears the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}, but does not shift in any data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{Tlc5940\+::update} (void)
+\begin{DoxyCompactList}\small\item\em Shifts in the data from the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_ga3d487c503365fa5b948b6711b9dac73e}{Tlc5940\+::set} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets channel to value in the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__CoreFunctions_gac712fcd944dd3f5f4f0ff158d754ea06}{Tlc5940\+::get} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Gets the current grayscale value for a channel. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_gacb63767b2063823e9c5d0e1d8db77ceb}{Tlc5940\+::set\+All} (uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets all channels to value. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_ga5b39a8719693ebb40aaa1005ab6c7323}{Tlc5940\+::set\+All\+DC} (uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the dot correction for all channels to value. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__CoreFunctions_ga732323bcfa69b08c39485866d692704a}{Tlc5940\+::read\+X\+E\+RR} (void)
+\begin{DoxyCompactList}\small\item\em Checks for shorted/broken L\+E\+Ds reported by any of the T\+L\+Cs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These function are all prefixed with \char`\"{}\+Tlc.\char`\"{}. 
+
+
+
+\subsection{Function Documentation}
+\index{Core Libary Functions@{Core Libary Functions}!clear@{clear}}
+\index{clear@{clear}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{clear(void)}{clear(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tlc5940\+::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_ga5e5acd62f0c91579694ed4cffd88bd76}{}\label{group__CoreFunctions_ga5e5acd62f0c91579694ed4cffd88bd76}
+
+
+Clears the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}, but does not shift in any data. 
+
+This call should be followed by \hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{update()} if you are turning off all the outputs. \index{Core Libary Functions@{Core Libary Functions}!get@{get}}
+\index{get@{get}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{get(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel)}{get(TLC_CHANNEL_TYPE channel)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Tlc5940\+::get (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_gac712fcd944dd3f5f4f0ff158d754ea06}{}\label{group__CoreFunctions_gac712fcd944dd3f5f4f0ff158d754ea06}
+
+
+Gets the current grayscale value for a channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & (0 to \hyperlink{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}{N\+U\+M\+\_\+\+T\+L\+CS} $\ast$ 16 -\/ 1). O\+U\+T0 of the first T\+LC is channel 0, O\+U\+T0 of the next T\+LC is channel 16, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current grayscale value (0 -\/ 4095) for channel 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__CoreFunctions_ga3d487c503365fa5b948b6711b9dac73e}{set} 
+\end{DoxySeeAlso}
+\index{Core Libary Functions@{Core Libary Functions}!init@{init}}
+\index{init@{init}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{init(uint16\+\_\+t initial\+Value=0)}{init(uint16_t initialValue=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tlc5940\+::init (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{initial\+Value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_gaa42fdda37a43a13f49b00924d93eedd4}{}\label{group__CoreFunctions_gaa42fdda37a43a13f49b00924d93eedd4}
+
+
+Pin i/o and Timer setup. 
+
+The grayscale register will be reset to all zeros, or whatever initial\+Value is set to and the Timers will start. 
+\begin{DoxyParams}{Parameters}
+{\em initial\+Value} & = 0, optional parameter specifing the inital startup value \\
+\hline
+\end{DoxyParams}
+\index{Core Libary Functions@{Core Libary Functions}!read\+X\+E\+RR@{read\+X\+E\+RR}}
+\index{read\+X\+E\+RR@{read\+X\+E\+RR}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{read\+X\+E\+R\+R(void)}{readXERR(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Tlc5940\+::read\+X\+E\+RR (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_ga732323bcfa69b08c39485866d692704a}{}\label{group__CoreFunctions_ga732323bcfa69b08c39485866d692704a}
+
+
+Checks for shorted/broken L\+E\+Ds reported by any of the T\+L\+Cs. 
+
+\begin{DoxyReturn}{Returns}
+1 if a T\+LC is reporting an error, 0 otherwise. 
+\end{DoxyReturn}
+\index{Core Libary Functions@{Core Libary Functions}!set@{set}}
+\index{set@{set}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{set(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel, uint16\+\_\+t value)}{set(TLC_CHANNEL_TYPE channel, uint16_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tlc5940\+::set (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}]{channel, }
+\item[{uint16\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_ga3d487c503365fa5b948b6711b9dac73e}{}\label{group__CoreFunctions_ga3d487c503365fa5b948b6711b9dac73e}
+
+
+Sets channel to value in the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & (0 to \hyperlink{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}{N\+U\+M\+\_\+\+T\+L\+CS} $\ast$ 16 -\/ 1). O\+U\+T0 of the first T\+LC is channel 0, O\+U\+T0 of the next T\+LC is channel 16, etc. \\
+\hline
+{\em value} & (0-\/4095). The grayscale value, 4095 is maximum. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__CoreFunctions_gac712fcd944dd3f5f4f0ff158d754ea06}{get} 
+\end{DoxySeeAlso}
+\index{Core Libary Functions@{Core Libary Functions}!set\+All@{set\+All}}
+\index{set\+All@{set\+All}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{set\+All(uint16\+\_\+t value)}{setAll(uint16_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tlc5940\+::set\+All (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_gacb63767b2063823e9c5d0e1d8db77ceb}{}\label{group__CoreFunctions_gacb63767b2063823e9c5d0e1d8db77ceb}
+
+
+Sets all channels to value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & grayscale value (0 -\/ 4095) \\
+\hline
+\end{DoxyParams}
+\index{Core Libary Functions@{Core Libary Functions}!set\+All\+DC@{set\+All\+DC}}
+\index{set\+All\+DC@{set\+All\+DC}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{set\+All\+D\+C(uint8\+\_\+t value)}{setAllDC(uint8_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tlc5940\+::set\+All\+DC (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_ga5b39a8719693ebb40aaa1005ab6c7323}{}\label{group__CoreFunctions_ga5b39a8719693ebb40aaa1005ab6c7323}
+
+
+Sets the dot correction for all channels to value. 
+
+The dot correction value correspondes to maximum output current by $\displaystyle I_{OUT_n} = I_{max} \times \frac{DCn}{63} $ where
+\begin{DoxyItemize}
+\item $\displaystyle I_{max} = \frac{1.24V}{R_{IREF}} \times 31.5 = \frac{39.06}{R_{IREF}} $
+\item D\+Cn is the dot correction value for channel n 
+\begin{DoxyParams}{Parameters}
+{\em value} & (0-\/63) \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\index{Core Libary Functions@{Core Libary Functions}!update@{update}}
+\index{update@{update}!Core Libary Functions@{Core Libary Functions}}
+\subsubsection[{\texorpdfstring{update(void)}{update(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Tlc5940\+::update (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{}\label{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}
+
+
+Shifts in the data from the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}. 
+
+If data has already been shifted in this grayscale cycle, another call to \hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{update()} will immediately return 1 without shifting in the new data. To ensure that a call to \hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{update()} does shift in new data, use 
+\begin{DoxyCode}
+\textcolor{keywordflow}{while}(\hyperlink{Tlc5940_8cpp_a4a520693b05c8dcd19ef500540a8b75e}{Tlc}.\hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{update}()); 
+\end{DoxyCode}
+ or 
+\begin{DoxyCode}
+\textcolor{keywordflow}{while}(\hyperlink{Tlc5940_8cpp_a5e4408cb0b93f0d5617680a8c3540242}{tlc\_needXLAT}); 
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+1 if there is data waiting to be latched, 0 if data was successfully shifted in 
+\end{DoxyReturn}

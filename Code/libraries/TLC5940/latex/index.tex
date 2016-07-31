@@ -1,0 +1,72 @@
+The \href{http://www.ti.com/lit/gpn/TLC5940}{\tt Texas Instruments T\+L\+C5940 } is a 16-\/channel, constant-\/current sink L\+ED driver. Each channel has an individually adjustable 4096-\/step grayscale P\+WM brightness control and a 64-\/step, constant-\/current sink (no L\+ED resistors needed!). This chip is a current sink, so be sure to use common anode R\+GB L\+E\+Ds.
+
+Check the \href{http://code.google.com/p/tlc5940arduino/}{\tt tlc5940arduino project} on Google Code for updates. To install, unzip the \char`\"{}\+Tlc5940\char`\"{} folder to $<$Arduino Folder$>$/hardware/libraries/
+
+~\hypertarget{index_hardwaresetup}{}\section{Hardware Setup}\label{index_hardwaresetup}
+The basic hardware setup is explained at the top of the Examples. A good place to start would be the Basic\+Use Example. (The examples are in File-\/$>$Sketchbook-\/$>$Examples-\/$>$Library-\/\+Tlc5940).
+
+All the options for the library are located in \hyperlink{tlc__config_8h}{tlc\+\_\+config.\+h}, including \hyperlink{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}{N\+U\+M\+\_\+\+T\+L\+CS}, what pins to use, and the P\+WM period. After changing \hyperlink{tlc__config_8h}{tlc\+\_\+config.\+h}, be sure to delete the Tlc5940.\+o file in the library folder to save the changes.
+
+~\hypertarget{index_libref}{}\section{Library Reference}\label{index_libref}
+\hyperlink{group__CoreFunctions}{Core Functions} (see the Basic\+Use Example and \hyperlink{classTlc5940}{Tlc5940})\+:
+\begin{DoxyItemize}
+\item \hyperlink{group__CoreFunctions_gaa42fdda37a43a13f49b00924d93eedd4}{Tlc.\+init(int initial\+Value (0-\/4095))} -\/ Call this is to setup the timers before using any other Tlc functions. initial\+Value defaults to zero (all channels off).
+\item \hyperlink{group__CoreFunctions_ga5e5acd62f0c91579694ed4cffd88bd76}{Tlc.\+clear()} -\/ Turns off all channels (Needs Tlc.\+update())
+\item \hyperlink{group__CoreFunctions_ga3d487c503365fa5b948b6711b9dac73e}{Tlc.\+set(uint8\+\_\+t channel (0-\/(N\+U\+M\+\_\+\+T\+L\+CS $\ast$ 16 -\/ 1)), int value (0-\/4095))} -\/ sets the grayscale data for channel. (Needs Tlc.\+update())
+\item \hyperlink{group__CoreFunctions_gacb63767b2063823e9c5d0e1d8db77ceb}{Tlc.\+set\+All(int value(0-\/4095))} -\/ sets all channels to value. (Needs Tlc.\+update())
+\item \hyperlink{group__CoreFunctions_gac712fcd944dd3f5f4f0ff158d754ea06}{uint16\+\_\+t Tlc.\+get(uint8\+\_\+t channel)} -\/ returns the grayscale data for channel (see set).
+\item \hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{Tlc.\+update()} -\/ Sends the changes from any Tlc.\+clear\textquotesingle{}s, Tlc.\+set\textquotesingle{}s, or Tlc.\+set\+All\textquotesingle{}s.
+\end{DoxyItemize}
+
+\hyperlink{group__ExtendedFunctions}{Extended Functions}. These require an include statement at the top of the sketch to use.
+
+\hyperlink{group__ReqVPRG__ENABLED}{Functions that require V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED}. These require V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED == 1 in \hyperlink{tlc__config_8h}{tlc\+\_\+config.\+h}
+
+~\hypertarget{index_expansion}{}\section{Expanding the Library}\label{index_expansion}
+Lets say we wanted to add a function like \char`\"{}tlc\+\_\+go\+Crazy(...)\char`\"{}. The first thing to do is to create a source file in the library folder, \char`\"{}tlc\+\_\+my\+\_\+crazy\+\_\+functions.\+h\char`\"{}. A template for this .h file is 
+\begin{DoxyCode}
+\textcolor{comment}{// Explination for my crazy function extension}
+
+\textcolor{preprocessor}{#ifndef TLC\_MY\_CRAZY\_FUNCTIONS\_H}
+\textcolor{preprocessor}{#define TLC\_MY\_CRAZY\_FUNCTIONS\_H}
+
+\textcolor{preprocessor}{#include "\hyperlink{tlc__config_8h}{tlc\_config.h}"}
+\textcolor{preprocessor}{#include "\hyperlink{Tlc5940_8h}{Tlc5940.h}"}
+
+\textcolor{keywordtype}{void} tlc\_goCrazy(\textcolor{keywordtype}{void});
+
+\textcolor{keywordtype}{void} tlc\_goCrazy(\textcolor{keywordtype}{void})
+\{
+    uint16\_t crazyFactor = 4000;
+    \hyperlink{Tlc5940_8cpp_a4a520693b05c8dcd19ef500540a8b75e}{Tlc}.\hyperlink{group__CoreFunctions_ga5e5acd62f0c91579694ed4cffd88bd76}{clear}();
+    \textcolor{keywordflow}{for} (uint8\_t \hyperlink{structTlc__Fade_a7fe3f4f2ae4c22eede7e36a39cf67bf6}{channel} = 4; \hyperlink{structTlc__Fade_a7fe3f4f2ae4c22eede7e36a39cf67bf6}{channel} < 9; \hyperlink{structTlc__Fade_a7fe3f4f2ae4c22eede7e36a39cf67bf6}{channel}++) \{
+        \hyperlink{Tlc5940_8cpp_a4a520693b05c8dcd19ef500540a8b75e}{Tlc}.\hyperlink{group__CoreFunctions_ga3d487c503365fa5b948b6711b9dac73e}{set}(\hyperlink{structTlc__Fade_a7fe3f4f2ae4c22eede7e36a39cf67bf6}{channel}, crazyFactor);
+    \}
+    \hyperlink{Tlc5940_8cpp_a4a520693b05c8dcd19ef500540a8b75e}{Tlc}.\hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{update}();
+\}
+
+\textcolor{preprocessor}{#endif}
+\end{DoxyCode}
+ Now to use your library in a sketch, just add 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "tlc\_my\_crazy\_functions.h"}
+
+\textcolor{comment}{// ...}
+
+tlc\_goCrazy();
+\end{DoxyCode}
+ If you would like to share your extended functions for others to use, email me (acleone $\sim$\+A\+T$\sim$ gmail.\+com) with the file and an example and I\textquotesingle{}ll include them in the library.
+
+~\hypertarget{index_bugs}{}\section{Contact}\label{index_bugs}
+If you found a bug in the library, email me so I can fix it! My email is acleone $\sim$\+A\+T$\sim$ gmail.\+com
+
+~\hypertarget{index_license}{}\section{License -\/ G\+P\+Lv3}\label{index_license}
+Copyright (c) 2009 by Alex Leone $<$acleone $\sim$\+A\+T$\sim$ gmail.\+com$>$
+
+This file is part of the Arduino T\+L\+C5940 Library.
+
+The Arduino T\+L\+C5940 Library is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+The Arduino T\+L\+C5940 Library is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with The Arduino T\+L\+C5940 Library. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 

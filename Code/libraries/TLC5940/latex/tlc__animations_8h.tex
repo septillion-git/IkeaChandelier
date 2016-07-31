@@ -1,0 +1,40 @@
+\hypertarget{tlc__animations_8h}{}\section{tlc\+\_\+animations.\+h File Reference}
+\label{tlc__animations_8h}\index{tlc\+\_\+animations.\+h@{tlc\+\_\+animations.\+h}}
+
+
+T\+LC Animation functions.  
+
+
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\\*
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}tlc\+\_\+config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tlc5940.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tlc\+\_\+progmem\+\_\+utils.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+volatile void \hyperlink{group__ExtendedFunctions_ga9b568baea2ed82ae278925596a412cd7}{tlc\+\_\+animation\+X\+L\+A\+T\+Callback} (void)
+\begin{DoxyCompactList}\small\item\em This is called by the X\+L\+AT interrupt every P\+WM period to do stuff. \end{DoxyCompactList}\item 
+void \hyperlink{group__ExtendedFunctions_ga587f08f4ed1ae1d1c8e87720be52fa62}{tlc\+\_\+play\+Animation} (prog\+\_\+uint8\+\_\+t $\ast$animation, uint16\+\_\+t frames, uint16\+\_\+t periods\+Per\+Frame)
+\begin{DoxyCompactList}\small\item\em Plays an animation from progmem in the \char`\"{}background\char`\"{} (with interrupts). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+prog\+\_\+uint8\+\_\+t $\ast$ \hyperlink{tlc__animations_8h_a9f37342ed9d0393b927a0afc7bfd30b3}{tlc\+\_\+current\+Animation}\hypertarget{tlc__animations_8h_a9f37342ed9d0393b927a0afc7bfd30b3}{}\label{tlc__animations_8h_a9f37342ed9d0393b927a0afc7bfd30b3}
+
+\begin{DoxyCompactList}\small\item\em The currently playing animation. \end{DoxyCompactList}\item 
+volatile uint16\+\_\+t \hyperlink{tlc__animations_8h_a2618890f4a8aaddb5e43dc916c348b29}{tlc\+\_\+animation\+Frames}\hypertarget{tlc__animations_8h_a2618890f4a8aaddb5e43dc916c348b29}{}\label{tlc__animations_8h_a2618890f4a8aaddb5e43dc916c348b29}
+
+\begin{DoxyCompactList}\small\item\em The number of frames in the current animation. \end{DoxyCompactList}\item 
+volatile uint16\+\_\+t \hyperlink{tlc__animations_8h_a7e9a6768a73fa5236481e097df205c16}{tlc\+\_\+animation\+Periods\+Per\+Frame}\hypertarget{tlc__animations_8h_a7e9a6768a73fa5236481e097df205c16}{}\label{tlc__animations_8h_a7e9a6768a73fa5236481e097df205c16}
+
+\begin{DoxyCompactList}\small\item\em The number of P\+WM periods to display each frame -\/ 1. \end{DoxyCompactList}\item 
+volatile uint16\+\_\+t \hyperlink{tlc__animations_8h_a418e8ea05756142cb30d4cb544c246cf}{tlc\+\_\+animation\+Periods\+Wait}\hypertarget{tlc__animations_8h_a418e8ea05756142cb30d4cb544c246cf}{}\label{tlc__animations_8h_a418e8ea05756142cb30d4cb544c246cf}
+
+\begin{DoxyCompactList}\small\item\em The current number of periods we\textquotesingle{}ve displayed this frame for. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+LC Animation functions. 
+
+These play animations from P\+R\+O\+G\+M\+EM. 

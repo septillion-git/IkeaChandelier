@@ -1,0 +1,212 @@
+\hypertarget{tlc__config_8h}{}\section{tlc\+\_\+config.\+h File Reference}
+\label{tlc__config_8h}\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+
+
+Configuration for the Arduino \hyperlink{classTlc5940}{Tlc5940} library.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}pinouts/chip\+\_\+includes.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tlc__config_8h_a1a68022973953fa48d9ed80d85f32628}{T\+L\+C\+\_\+\+B\+I\+T\+B\+A\+NG}~1\hypertarget{tlc__config_8h_a1a68022973953fa48d9ed80d85f32628}{}\label{tlc__config_8h_a1a68022973953fa48d9ed80d85f32628}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/bang using any two i/o pins. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_a1bf6e1b7f75cb4ae3896d96a101ac1ff}{T\+L\+C\+\_\+\+S\+PI}~2\hypertarget{tlc__config_8h_a1bf6e1b7f75cb4ae3896d96a101ac1ff}{}\label{tlc__config_8h_a1bf6e1b7f75cb4ae3896d96a101ac1ff}
+
+\begin{DoxyCompactList}\small\item\em Use the much faster hardware S\+PI module. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}{N\+U\+M\+\_\+\+T\+L\+CS}~1
+\begin{DoxyCompactList}\small\item\em Number of T\+L\+Cs daisy-\/chained. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_aeeca572fd35c7756dc7bfece409cfb85}{D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE}~\hyperlink{tlc__config_8h_a1bf6e1b7f75cb4ae3896d96a101ac1ff}{T\+L\+C\+\_\+\+S\+PI}
+\begin{DoxyCompactList}\small\item\em Determines how data should be transfered to the T\+L\+Cs. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}~uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em If more than 16 T\+L\+Cs are daisy-\/chained, the channel type has to be uint16\+\_\+t. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_abb206b2da1542dfeb3e0387869b1d8b7}{T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD}~8192
+\begin{DoxyCompactList}\small\item\em Determines how long each P\+WM period should be, in clocks. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_a4138267b422d36e820648de0b81cc247}{T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD}~3
+\begin{DoxyCompactList}\small\item\em Determines how long each period G\+S\+C\+LK is. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_ac60c9e880ca34d3351cf55fd97e840a9}{V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED}~0
+\begin{DoxyCompactList}\small\item\em Enables/disables V\+P\+RG (T\+LC pin 27) functionality. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_a5ba3eb3684c9cf5b7d99837a08b2b788}{X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED}~0
+\begin{DoxyCompactList}\small\item\em Enables/disables X\+E\+RR (T\+LC pin 16) functionality to check for shorted/broken L\+E\+Ds. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_a31c2962dfc27b985882c0f6c1803186e}{V\+P\+R\+G\+\_\+\+P\+IN}~D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+P\+R\+G\+\_\+\+P\+IN\hypertarget{tlc__config_8h_a31c2962dfc27b985882c0f6c1803186e}{}\label{tlc__config_8h_a31c2962dfc27b985882c0f6c1803186e}
+
+\begin{DoxyCompactList}\small\item\em V\+P\+RG (T\+LC pin 27) \end{DoxyCompactList}\item 
+\#define {\bfseries V\+P\+R\+G\+\_\+\+P\+O\+RT}~D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+P\+R\+G\+\_\+\+P\+O\+RT\hypertarget{tlc__config_8h_aa1e57ed97b16359cf3a772eca7bb4649}{}\label{tlc__config_8h_aa1e57ed97b16359cf3a772eca7bb4649}
+
+\item 
+\#define {\bfseries V\+P\+R\+G\+\_\+\+D\+DR}~D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+P\+R\+G\+\_\+\+D\+DR\hypertarget{tlc__config_8h_aa8904494e2abdb712c2094d7bd2f7c0c}{}\label{tlc__config_8h_aa8904494e2abdb712c2094d7bd2f7c0c}
+
+\item 
+\#define \hyperlink{tlc__config_8h_a03586e24a9fa6644f1063b3b520491b3}{X\+E\+R\+R\+\_\+\+P\+IN}~D\+E\+F\+A\+U\+L\+T\+\_\+\+X\+E\+R\+R\+\_\+\+P\+IN\hypertarget{tlc__config_8h_a03586e24a9fa6644f1063b3b520491b3}{}\label{tlc__config_8h_a03586e24a9fa6644f1063b3b520491b3}
+
+\begin{DoxyCompactList}\small\item\em X\+E\+RR (T\+LC pin 16) \end{DoxyCompactList}\item 
+\#define {\bfseries X\+E\+R\+R\+\_\+\+P\+O\+RT}~D\+E\+F\+A\+U\+L\+T\+\_\+\+X\+E\+R\+R\+\_\+\+P\+O\+RT\hypertarget{tlc__config_8h_af3e3f65daec8d4ab17aadeedda584283}{}\label{tlc__config_8h_af3e3f65daec8d4ab17aadeedda584283}
+
+\item 
+\#define {\bfseries X\+E\+R\+R\+\_\+\+D\+DR}~D\+E\+F\+A\+U\+L\+T\+\_\+\+X\+E\+R\+R\+\_\+\+D\+DR\hypertarget{tlc__config_8h_ae751614fbed13f178576f9390cd3cc08}{}\label{tlc__config_8h_ae751614fbed13f178576f9390cd3cc08}
+
+\item 
+\#define {\bfseries X\+E\+R\+R\+\_\+\+P\+I\+NS}~D\+E\+F\+A\+U\+L\+T\+\_\+\+X\+E\+R\+R\+\_\+\+P\+I\+NS\hypertarget{tlc__config_8h_abe2b39cccf7711c62ed3916acf4b7e88}{}\label{tlc__config_8h_abe2b39cccf7711c62ed3916acf4b7e88}
+
+\item 
+\#define \hyperlink{tlc__config_8h_ad6f4ad574d8ec8a8f04d8274144b24c0}{S\+I\+N\+\_\+\+P\+IN}~T\+L\+C\+\_\+\+M\+O\+S\+I\+\_\+\+P\+IN\hypertarget{tlc__config_8h_ad6f4ad574d8ec8a8f04d8274144b24c0}{}\label{tlc__config_8h_ad6f4ad574d8ec8a8f04d8274144b24c0}
+
+\begin{DoxyCompactList}\small\item\em S\+IN (T\+LC pin 26) \end{DoxyCompactList}\item 
+\#define {\bfseries S\+I\+N\+\_\+\+P\+O\+RT}~T\+L\+C\+\_\+\+M\+O\+S\+I\+\_\+\+P\+O\+RT\hypertarget{tlc__config_8h_a0b28576b106d4f5788eb5601d88f3032}{}\label{tlc__config_8h_a0b28576b106d4f5788eb5601d88f3032}
+
+\item 
+\#define {\bfseries S\+I\+N\+\_\+\+D\+DR}~T\+L\+C\+\_\+\+M\+O\+S\+I\+\_\+\+D\+DR\hypertarget{tlc__config_8h_ae090beb910f8291dc05a5ff1671b3f99}{}\label{tlc__config_8h_ae090beb910f8291dc05a5ff1671b3f99}
+
+\item 
+\#define \hyperlink{tlc__config_8h_ac9bb6d868837c450a2172efa97326d4a}{S\+C\+L\+K\+\_\+\+P\+IN}~T\+L\+C\+\_\+\+S\+C\+K\+\_\+\+P\+IN\hypertarget{tlc__config_8h_ac9bb6d868837c450a2172efa97326d4a}{}\label{tlc__config_8h_ac9bb6d868837c450a2172efa97326d4a}
+
+\begin{DoxyCompactList}\small\item\em S\+C\+LK (T\+LC pin 25) \end{DoxyCompactList}\item 
+\#define {\bfseries S\+C\+L\+K\+\_\+\+P\+O\+RT}~T\+L\+C\+\_\+\+S\+C\+K\+\_\+\+P\+O\+RT\hypertarget{tlc__config_8h_ad90c96b01097c6435545e6892cce9e39}{}\label{tlc__config_8h_ad90c96b01097c6435545e6892cce9e39}
+
+\item 
+\#define {\bfseries S\+C\+L\+K\+\_\+\+D\+DR}~T\+L\+C\+\_\+\+S\+C\+K\+\_\+\+D\+DR\hypertarget{tlc__config_8h_abde16a6fbe9b35bb012c4ffb3d473642}{}\label{tlc__config_8h_abde16a6fbe9b35bb012c4ffb3d473642}
+
+\item 
+\#define \hyperlink{tlc__config_8h_a01153a2052cd531a30dd05472a909cb6}{G\+S\+\_\+\+D\+UO}(a,  b)    ~((a) $>$$>$ 4), ((a) $<$$<$ 4) $\vert$ ((b) $>$$>$ 8), (b)
+\begin{DoxyCompactList}\small\item\em Arranges 2 grayscale values (0 -\/ 4095) in the packed array format (3 bytes). \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__config_8h_ab4f8107b4cdf76352f7cd594d2370cf9}{D\+C\+\_\+\+Q\+U\+A\+R\+T\+ET}(a,  b,  c,  d)  
+\begin{DoxyCompactList}\small\item\em Arranges 4 dot correction values (0 -\/ 63) in the packed array format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration for the Arduino \hyperlink{classTlc5940}{Tlc5940} library. 
+
+After making changes to this file, delete Tlc5940.\+o in this folder so the changes are applied.
+
+A summary of all the options\+:
+\begin{DoxyItemize}
+\item Number of T\+L\+Cs daisy-\/chained\+: N\+U\+M\+\_\+\+T\+L\+CS (default 1)
+\item Enable/\+Disable V\+P\+RG functionality\+: V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED (default 0)
+\item Enable/\+Disable X\+E\+RR functionality\+: X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED (default 0)
+\item Should the library use bit-\/banging (any pins) or hardware S\+PI (faster)\+: D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE (default T\+L\+C\+\_\+\+S\+PI)
+\item Which pins to use for bit-\/banging\+: S\+I\+N\+\_\+\+P\+IN, S\+I\+N\+\_\+\+P\+O\+RT, S\+I\+N\+\_\+\+D\+DR and S\+C\+L\+K\+\_\+\+P\+IN, S\+C\+L\+K\+\_\+\+P\+O\+RT, S\+C\+L\+K\+\_\+\+D\+DR
+\item The P\+WM period\+: T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD (be sure to change T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD accordingly!)
+\end{DoxyItemize}
+
+How to change the pin mapping\+:
+\begin{DoxyItemize}
+\item Arduino digital pin 0-\/7 = P\+O\+R\+TD, P\+D0-\/7
+\item Arduino digital pin 8-\/13 = P\+O\+R\+TB, P\+B0-\/5
+\item Arduino analog pin 0-\/5 = P\+O\+R\+TC, P\+C0-\/5 
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE@{D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE}}
+\index{D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE@{D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE}{DATA_TRANSFER_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+DE~{\bf T\+L\+C\+\_\+\+S\+PI}}\hypertarget{tlc__config_8h_aeeca572fd35c7756dc7bfece409cfb85}{}\label{tlc__config_8h_aeeca572fd35c7756dc7bfece409cfb85}
+
+
+Determines how data should be transfered to the T\+L\+Cs. 
+
+Bit-\/banging can use any two i/o pins, but the hardware S\+PI is faster.
+\begin{DoxyItemize}
+\item Bit-\/\+Bang = T\+L\+C\+\_\+\+B\+I\+T\+B\+A\+NG
+\item Hardware S\+PI = T\+L\+C\+\_\+\+S\+PI (default) 
+\end{DoxyItemize}\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!D\+C\+\_\+\+Q\+U\+A\+R\+T\+ET@{D\+C\+\_\+\+Q\+U\+A\+R\+T\+ET}}
+\index{D\+C\+\_\+\+Q\+U\+A\+R\+T\+ET@{D\+C\+\_\+\+Q\+U\+A\+R\+T\+ET}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{D\+C\+\_\+\+Q\+U\+A\+R\+T\+ET}{DC_QUARTET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+C\+\_\+\+Q\+U\+A\+R\+T\+ET(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{tlc__config_8h_ab4f8107b4cdf76352f7cd594d2370cf9}{}\label{tlc__config_8h_ab4f8107b4cdf76352f7cd594d2370cf9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((a) << 2) | ((b) >> 4), \(\backslash\)
+                                 ((b) << 4) | ((c) >> 2), \(\backslash\)
+                                 ((c) << 6) | (d)
+\end{DoxyCode}
+
+
+Arranges 4 dot correction values (0 -\/ 63) in the packed array format. 
+
+\begin{DoxySeeAlso}{See also}
+set\+D\+Cto\+Progmem\+Array 
+\end{DoxySeeAlso}
+\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!G\+S\+\_\+\+D\+UO@{G\+S\+\_\+\+D\+UO}}
+\index{G\+S\+\_\+\+D\+UO@{G\+S\+\_\+\+D\+UO}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{G\+S\+\_\+\+D\+UO}{GS_DUO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+S\+\_\+\+D\+UO(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((a) $>$$>$ 4), ((a) $<$$<$ 4) $\vert$ ((b) $>$$>$ 8), (b)}\hypertarget{tlc__config_8h_a01153a2052cd531a30dd05472a909cb6}{}\label{tlc__config_8h_a01153a2052cd531a30dd05472a909cb6}
+
+
+Arranges 2 grayscale values (0 -\/ 4095) in the packed array format (3 bytes). 
+
+This is for array initializers only\+: the output is three comma seperated 8-\/bit values. \index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!N\+U\+M\+\_\+\+T\+L\+CS@{N\+U\+M\+\_\+\+T\+L\+CS}}
+\index{N\+U\+M\+\_\+\+T\+L\+CS@{N\+U\+M\+\_\+\+T\+L\+CS}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+\_\+\+T\+L\+CS}{NUM_TLCS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+T\+L\+CS~1}\hypertarget{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}{}\label{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}
+
+
+Number of T\+L\+Cs daisy-\/chained. 
+
+To daisy-\/chain, attach the S\+O\+UT (T\+LC pin 17) of the first T\+LC to the S\+IN (T\+LC pin 26) of the next. The rest of the pins are attached normally. \begin{DoxyNote}{Note}
+Each T\+LC needs it\textquotesingle{}s own I\+R\+EF resistor 
+\end{DoxyNote}
+\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE@{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}
+\index{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE@{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}{TLC_CHANNEL_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE~uint8\+\_\+t}\hypertarget{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{}\label{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}
+
+
+If more than 16 T\+L\+Cs are daisy-\/chained, the channel type has to be uint16\+\_\+t. 
+
+Default is uint8\+\_\+t, which supports up to 16 T\+L\+Cs. \index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD@{T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD}}
+\index{T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD@{T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD}{TLC_GSCLK_PERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD~3}\hypertarget{tlc__config_8h_a4138267b422d36e820648de0b81cc247}{}\label{tlc__config_8h_a4138267b422d36e820648de0b81cc247}
+
+
+Determines how long each period G\+S\+C\+LK is. 
+
+This is related to T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD\+: $\displaystyle TLC\_GSCLK\_PERIOD = \frac{2 * TLC\_PWM\_PERIOD}{4096} - 1 $ \begin{DoxyNote}{Note}
+Default is 3 
+\end{DoxyNote}
+\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD@{T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD}}
+\index{T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD@{T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD}{TLC_PWM_PERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+L\+C\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+OD~8192}\hypertarget{tlc__config_8h_abb206b2da1542dfeb3e0387869b1d8b7}{}\label{tlc__config_8h_abb206b2da1542dfeb3e0387869b1d8b7}
+
+
+Determines how long each P\+WM period should be, in clocks. 
+
+$\displaystyle f_{PWM} = \frac{f_{osc}}{2 * TLC\_PWM\_PERIOD} Hz $ $\displaystyle TLC\_PWM\_PERIOD = \frac{f_{osc}}{2 * f_{PWM}} $ This is related to T\+L\+C\+\_\+\+G\+S\+C\+L\+K\+\_\+\+P\+E\+R\+I\+OD\+: $\displaystyle TLC\_PWM\_PERIOD = \frac{(TLC\_GSCLK\_PERIOD + 1) * 4096}{2} $ \begin{DoxyNote}{Note}
+The default of 8192 means the P\+WM frequency is 976.\+5625\+Hz 
+\end{DoxyNote}
+\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED@{V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED@{V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED}{VPRG_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED~0}\hypertarget{tlc__config_8h_ac60c9e880ca34d3351cf55fd97e840a9}{}\label{tlc__config_8h_ac60c9e880ca34d3351cf55fd97e840a9}
+
+
+Enables/disables V\+P\+RG (T\+LC pin 27) functionality. 
+
+If you need to set dot correction data, this needs to be enabled.
+\begin{DoxyItemize}
+\item 0 V\+P\+RG is not connected. {\itshape T\+LC pin 27 must be grounded!} (default)
+\item 1 V\+P\+RG is connected \begin{DoxyNote}{Note}
+V\+P\+RG to G\+ND inputs grayscale data, V\+P\+RG to Vcc inputs dot-\/correction data 
+\end{DoxyNote}
+
+\end{DoxyItemize}\index{tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}!X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED}!tlc\+\_\+config.\+h@{tlc\+\_\+config.\+h}}
+\subsubsection[{\texorpdfstring{X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED}{XERR_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\+E\+R\+R\+\_\+\+E\+N\+A\+B\+L\+ED~0}\hypertarget{tlc__config_8h_a5ba3eb3684c9cf5b7d99837a08b2b788}{}\label{tlc__config_8h_a5ba3eb3684c9cf5b7d99837a08b2b788}
+
+
+Enables/disables X\+E\+RR (T\+LC pin 16) functionality to check for shorted/broken L\+E\+Ds. 
+
+
+\begin{DoxyItemize}
+\item 0 X\+E\+RR is not connected (default)
+\item 1 X\+E\+RR is connected \begin{DoxyNote}{Note}
+X\+E\+RR is active low 
+\end{DoxyNote}
+
+\end{DoxyItemize}

@@ -1,0 +1,406 @@
+\hypertarget{group__ExtendedFunctions}{}\section{Extended Library Functions}
+\label{group__ExtendedFunctions}\index{Extended Library Functions@{Extended Library Functions}}
+
+
+These functions require an include statement at the top of the sketch.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__ReqVPRG__ENABLED}{Functions that Require V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED}
+\begin{DoxyCompactList}\small\item\em Functions that require V\+P\+R\+G\+\_\+\+E\+N\+A\+B\+L\+ED == 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__ExtendedFunctions_ga587f08f4ed1ae1d1c8e87720be52fa62}{tlc\+\_\+play\+Animation} (prog\+\_\+uint8\+\_\+t $\ast$animation, uint16\+\_\+t frames, uint16\+\_\+t periods\+Per\+Frame)
+\begin{DoxyCompactList}\small\item\em Plays an animation from progmem in the \char`\"{}background\char`\"{} (with interrupts). \end{DoxyCompactList}\item 
+volatile void \hyperlink{group__ExtendedFunctions_ga9b568baea2ed82ae278925596a412cd7}{tlc\+\_\+animation\+X\+L\+A\+T\+Callback} (void)
+\begin{DoxyCompactList}\small\item\em This is called by the X\+L\+AT interrupt every P\+WM period to do stuff. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga5af78538816f1331f3d1977b6feaa2df}{tlc\+\_\+add\+Fade} (struct \hyperlink{structTlc__Fade}{Tlc\+\_\+\+Fade} $\ast$fade)
+\begin{DoxyCompactList}\small\item\em Adds a fade to the buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_gac32743e3ae17199f6d91bea66410a6c5}{tlc\+\_\+add\+Fade} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel, int16\+\_\+t start\+Value, int16\+\_\+t end\+Value, uint32\+\_\+t start\+Millis, uint32\+\_\+t end\+Millis)
+\begin{DoxyCompactList}\small\item\em Adds a fade to the fade buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga3ba34d1e1519c8f742b364958bced96f}{tlc\+\_\+is\+Fading} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Checks to see if any fades are happening on channel. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga262446811b33d3765bf9434bebb60cff}{tlc\+\_\+remove\+Fades} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Removes any fades from the fade buffer on this channel. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga48d61decbeb32b4b31c0e82097e69577}{tlc\+\_\+update\+Fades} ()
+\begin{DoxyCompactList}\small\item\em Updates fades using millis() \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_gaa3da29446480ef76d5c2a26ef97b1884}{tlc\+\_\+update\+Fades} (uint32\+\_\+t current\+Millis)
+\begin{DoxyCompactList}\small\item\em Updates any running fades. \end{DoxyCompactList}\item 
+void \hyperlink{group__ExtendedFunctions_gab61761323f7364b25d83c6e63711cd4b}{tlc\+\_\+set\+G\+Sfrom\+Progmem} (prog\+\_\+uint8\+\_\+t $\ast$gs\+Array)
+\begin{DoxyCompactList}\small\item\em Sets the grayscale data from an array in progmem. \end{DoxyCompactList}\item 
+void \hyperlink{group__ExtendedFunctions_gafda382e9cf45520a6a5d6ae866785db8}{tlc\+\_\+init\+Servos} (uint8\+\_\+t init\+Angle)
+\begin{DoxyCompactList}\small\item\em Initializes the tlc. \end{DoxyCompactList}\item 
+void \hyperlink{group__ExtendedFunctions_ga813d2236e395bc29a66908fd683f61fc}{tlc\+\_\+set\+Servo} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel, uint8\+\_\+t angle)
+\begin{DoxyCompactList}\small\item\em Sets a servo on channel to angle. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga8cac1e00c8fe44fdfe71ed7623440df2}{tlc\+\_\+get\+Servo} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Gets the current angle that channel is set to. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ExtendedFunctions_ga4583e7fd6068bc60670fa1d8213b7058}{tlc\+\_\+angle\+To\+Val} (uint8\+\_\+t angle)
+\begin{DoxyCompactList}\small\item\em Converts and angle (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE) to the inverted tlc channel value (4095 -\/ 0). \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga0d85d1813cdd7bca0d5aeea2e00aa896}{tlc\+\_\+val\+To\+Angle} (uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Converts an inverted tlc channel value (4095 -\/ 0) into an angle (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE). \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ExtendedFunctions_gad499bc0e483c5b25efb839ade79bcaa0}{tlc\+\_\+shift\+Up} (uint16\+\_\+t zero\+Value)
+\begin{DoxyCompactList}\small\item\em Shifts all the channel data up (O\+U\+T0 becomes O\+U\+T1 ...). \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ExtendedFunctions_gaed782802c116fdd531198281b196908b}{tlc\+\_\+shift\+Down} (uint16\+\_\+t top\+Value)
+\begin{DoxyCompactList}\small\item\em Shifts all the channel data down (O\+UT 15 -\/$>$ O\+UT 14 ...). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These functions require an include statement at the top of the sketch. 
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{tlc__animations_8h}{tlc\_animations.h}"} 
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item void tlc\+\_\+play\+Animation(prog\+\_\+uint8\+\_\+t $\ast$animation, uint16\+\_\+t frames, uint16\+\_\+t periods\+Per\+Frame) -\/ plays an animation from progmem.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{tlc__fades_8h}{tlc\_fades.h}"} 
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga48d61decbeb32b4b31c0e82097e69577}{tlc\+\_\+update\+Fades()} -\/ updates all fades
+\item uint8\+\_\+t \hyperlink{group__ExtendedFunctions_gaa3da29446480ef76d5c2a26ef97b1884}{tlc\+\_\+update\+Fades(uint32\+\_\+t current\+Millis)} -\/ updates fades using current\+Millis as the current time
+\item uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga5af78538816f1331f3d1977b6feaa2df}{tlc\+\_\+add\+Fade(struct Tlc\+\_\+\+Fade $\ast$fade)} -\/ copies fade into the fade buffer
+\item uint8\+\_\+t tlc\+\_\+add\+Fade(T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE channel, int16\+\_\+t start\+Value, int16\+\_\+t end\+Value, uint32\+\_\+t start\+Millis, uint32\+\_\+t end\+Millis) -\/ adds a fade to the fade buffer
+\item uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga3ba34d1e1519c8f742b364958bced96f}{tlc\+\_\+is\+Fading(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel)} -\/ returns 1 if there\textquotesingle{}s a fade on this channel in the buffer
+\item uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga262446811b33d3765bf9434bebb60cff}{tlc\+\_\+remove\+Fades(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel)} -\/ removes all fades on channel
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{tlc__progmem__utils_8h}{tlc\_progmem\_utils.h}"} 
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item void \hyperlink{group__ExtendedFunctions_gab61761323f7364b25d83c6e63711cd4b}{tlc\+\_\+set\+G\+Sfrom\+Progmem(prog\+\_\+uint8\+\_\+t $\ast$gs\+Array)} -\/ copies the progmem grayscale to current grayscale array. Requires a \hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{Tlc.\+update() }.
+\item void \hyperlink{group__ReqVPRG__ENABLED_ga0ee9aa27ddfa975fba5b1dbba1cced25}{tlc\+\_\+set\+D\+Cfrom\+Progmem(prog\+\_\+uint8\+\_\+t $\ast$dc\+Array)} -\/ shifts the data from a progmem dot correction array (doesn\textquotesingle{}t need an update).
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{tlc__servos_8h}{tlc\_servos.h}"} 
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item void tlc\+\_\+init\+Servos(uint8\+\_\+t init\+Angle = 0) -\/ initializes the tlc for servos.
+\item void \hyperlink{group__ExtendedFunctions_ga813d2236e395bc29a66908fd683f61fc}{tlc\+\_\+set\+Servo(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel, uint8\+\_\+t angle)} -\/ sets a servo to an angle
+\item uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga8cac1e00c8fe44fdfe71ed7623440df2}{tlc\+\_\+get\+Servo(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel)} -\/ gets the currently set servo angle
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{tlc__shifts_8h}{tlc\_shifts.h}"} 
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item uint16\+\_\+t tlc\+\_\+shift\+Up(uint16\+\_\+t zero\+Value = 0) -\/ shifts all channel data up (O\+U\+T0 becomes O\+U\+T1 ...) and returns O\+U\+T15
+\item uint16\+\_\+t tlc\+\_\+shift\+Down(uint16\+\_\+t top\+Value = 0) -\/ shifts all channel data down (O\+U\+T15 becomes O\+U\+T14 ...) and returns O\+U\+T0 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+add\+Fade@{tlc\+\_\+add\+Fade}}
+\index{tlc\+\_\+add\+Fade@{tlc\+\_\+add\+Fade}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+add\+Fade(struct Tlc\+\_\+\+Fade $\ast$fade)}{tlc_addFade(struct Tlc_Fade *fade)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+add\+Fade (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Tlc\+\_\+\+Fade} $\ast$}]{fade}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga5af78538816f1331f3d1977b6feaa2df}{}\label{group__ExtendedFunctions_ga5af78538816f1331f3d1977b6feaa2df}
+
+
+Adds a fade to the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fade} & the fade to be copied into the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the fade buffer is full, fade\+Buffer\+Size if added successfully 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+add\+Fade@{tlc\+\_\+add\+Fade}}
+\index{tlc\+\_\+add\+Fade@{tlc\+\_\+add\+Fade}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+add\+Fade(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel, int16\+\_\+t start\+Value, int16\+\_\+t end\+Value, uint32\+\_\+t start\+Millis, uint32\+\_\+t end\+Millis)}{tlc_addFade(TLC_CHANNEL_TYPE channel, int16_t startValue, int16_t endValue, uint32_t startMillis, uint32_t endMillis)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+add\+Fade (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}]{channel, }
+\item[{int16\+\_\+t}]{start\+Value, }
+\item[{int16\+\_\+t}]{end\+Value, }
+\item[{uint32\+\_\+t}]{start\+Millis, }
+\item[{uint32\+\_\+t}]{end\+Millis}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_gac32743e3ae17199f6d91bea66410a6c5}{}\label{group__ExtendedFunctions_gac32743e3ae17199f6d91bea66410a6c5}
+
+
+Adds a fade to the fade buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & the ouput channel this fade is on \\
+\hline
+{\em start\+Value} & the value at the start of the fade \\
+\hline
+{\em end\+Value} & the value at the end of the fade \\
+\hline
+{\em start\+Millis} & the millis() when to start the fade \\
+\hline
+{\em end\+Millis} & the millis() when to end the fade \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the fade buffer is full, fade\+Buffer\+Size if added successfully 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+angle\+To\+Val@{tlc\+\_\+angle\+To\+Val}}
+\index{tlc\+\_\+angle\+To\+Val@{tlc\+\_\+angle\+To\+Val}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+angle\+To\+Val(uint8\+\_\+t angle)}{tlc_angleToVal(uint8_t angle)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t tlc\+\_\+angle\+To\+Val (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga4583e7fd6068bc60670fa1d8213b7058}{}\label{group__ExtendedFunctions_ga4583e7fd6068bc60670fa1d8213b7058}
+
+
+Converts and angle (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE) to the inverted tlc channel value (4095 -\/ 0). 
+
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+animation\+X\+L\+A\+T\+Callback@{tlc\+\_\+animation\+X\+L\+A\+T\+Callback}}
+\index{tlc\+\_\+animation\+X\+L\+A\+T\+Callback@{tlc\+\_\+animation\+X\+L\+A\+T\+Callback}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+animation\+X\+L\+A\+T\+Callback(void)}{tlc_animationXLATCallback(void)}}]{\setlength{\rightskip}{0pt plus 5cm}volatile void tlc\+\_\+animation\+X\+L\+A\+T\+Callback (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga9b568baea2ed82ae278925596a412cd7}{}\label{group__ExtendedFunctions_ga9b568baea2ed82ae278925596a412cd7}
+
+
+This is called by the X\+L\+AT interrupt every P\+WM period to do stuff. 
+
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+get\+Servo@{tlc\+\_\+get\+Servo}}
+\index{tlc\+\_\+get\+Servo@{tlc\+\_\+get\+Servo}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+get\+Servo(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel)}{tlc_getServo(TLC_CHANNEL_TYPE channel)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+get\+Servo (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga8cac1e00c8fe44fdfe71ed7623440df2}{}\label{group__ExtendedFunctions_ga8cac1e00c8fe44fdfe71ed7623440df2}
+
+
+Gets the current angle that channel is set to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & which channel to get \\
+\hline
+\end{DoxyParams}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+init\+Servos@{tlc\+\_\+init\+Servos}}
+\index{tlc\+\_\+init\+Servos@{tlc\+\_\+init\+Servos}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+init\+Servos(uint8\+\_\+t init\+Angle)}{tlc_initServos(uint8_t initAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}void tlc\+\_\+init\+Servos (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{init\+Angle}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_gafda382e9cf45520a6a5d6ae866785db8}{}\label{group__ExtendedFunctions_gafda382e9cf45520a6a5d6ae866785db8}
+
+
+Initializes the tlc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+Angle} & the initial angle to set all servos to (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE). \\
+\hline
+\end{DoxyParams}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+is\+Fading@{tlc\+\_\+is\+Fading}}
+\index{tlc\+\_\+is\+Fading@{tlc\+\_\+is\+Fading}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+is\+Fading(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel)}{tlc_isFading(TLC_CHANNEL_TYPE channel)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+is\+Fading (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga3ba34d1e1519c8f742b364958bced96f}{}\label{group__ExtendedFunctions_ga3ba34d1e1519c8f742b364958bced96f}
+
+
+Checks to see if any fades are happening on channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & the channel to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if there is a fade in the buffer on this channel, 0 otherwise 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+play\+Animation@{tlc\+\_\+play\+Animation}}
+\index{tlc\+\_\+play\+Animation@{tlc\+\_\+play\+Animation}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+play\+Animation(prog\+\_\+uint8\+\_\+t $\ast$animation, uint16\+\_\+t frames, uint16\+\_\+t periods\+Per\+Frame)}{tlc_playAnimation(prog_uint8_t *animation, uint16_t frames, uint16_t periodsPerFrame)}}]{\setlength{\rightskip}{0pt plus 5cm}void tlc\+\_\+play\+Animation (
+\begin{DoxyParamCaption}
+\item[{prog\+\_\+uint8\+\_\+t $\ast$}]{animation, }
+\item[{uint16\+\_\+t}]{frames, }
+\item[{uint16\+\_\+t}]{periods\+Per\+Frame}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga587f08f4ed1ae1d1c8e87720be52fa62}{}\label{group__ExtendedFunctions_ga587f08f4ed1ae1d1c8e87720be52fa62}
+
+
+Plays an animation from progmem in the \char`\"{}background\char`\"{} (with interrupts). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em animation} & A progmem array of grayscale data, length N\+U\+M\+\_\+\+T\+L\+CS $\ast$ 24 $\ast$ frames, in reverse order. Ensure that there is not an update waiting to happen before calling this. \\
+\hline
+{\em frames} & the number of frames in animation \\
+\hline
+{\em periods\+Per\+Frame} & number of P\+WM periods to wait between each frame (0 means play the animation as fast as possible). The default P\+WM period for a 16\+M\+Hz clock is 1.\+024ms. \\
+\hline
+\end{DoxyParams}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+remove\+Fades@{tlc\+\_\+remove\+Fades}}
+\index{tlc\+\_\+remove\+Fades@{tlc\+\_\+remove\+Fades}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+remove\+Fades(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel)}{tlc_removeFades(TLC_CHANNEL_TYPE channel)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+remove\+Fades (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga262446811b33d3765bf9434bebb60cff}{}\label{group__ExtendedFunctions_ga262446811b33d3765bf9434bebb60cff}
+
+
+Removes any fades from the fade buffer on this channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & which channel the fades are on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+how many fades were removed 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+set\+G\+Sfrom\+Progmem@{tlc\+\_\+set\+G\+Sfrom\+Progmem}}
+\index{tlc\+\_\+set\+G\+Sfrom\+Progmem@{tlc\+\_\+set\+G\+Sfrom\+Progmem}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+set\+G\+Sfrom\+Progmem(prog\+\_\+uint8\+\_\+t $\ast$gs\+Array)}{tlc_setGSfromProgmem(prog_uint8_t *gsArray)}}]{\setlength{\rightskip}{0pt plus 5cm}void tlc\+\_\+set\+G\+Sfrom\+Progmem (
+\begin{DoxyParamCaption}
+\item[{prog\+\_\+uint8\+\_\+t $\ast$}]{gs\+Array}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_gab61761323f7364b25d83c6e63711cd4b}{}\label{group__ExtendedFunctions_gab61761323f7364b25d83c6e63711cd4b}
+
+
+Sets the grayscale data from an array in progmem. 
+
+This doesn\textquotesingle{}t shift out any data\+: call Tlc.\+update(). An example\+: 
+\begin{DoxyCode}
+1 #include "tlc\_progmem\_utils.h"
+2 prog\_uint8\_t gsArray1[NUM\_TLCS * 24] = \{
+3   GS\_DUO((4095 * 16)/16, (4095 * 15)/16), GS\_DUO((4095 * 14)/16, (4095 * 13)/16),
+4   GS\_DUO((4095 * 12)/16, (4095 * 11)/16), GS\_DUO((4095 * 10)/16, (4095 * 9)/16),
+5   GS\_DUO((4095 * 8)/16, (4095 * 7)/16), GS\_DUO((4095 * 6)/16, (4095 * 5)/16),
+6   GS\_DUO((4095 * 4)/16, (4095 * 3)/16), GS\_DUO((4095 * 2)/16, (4095 * 1)/16),
+7 \};
+8 
+9 // sometime after Tlc.init()
+10 tlc\_setGSfromProgmem(gsArray1);
+11 Tlc.update();
+\end{DoxyCode}
+ This would set a ramp of values from O\+U\+T0 to O\+U\+T15. (Although the N\+U\+M\+\_\+\+T\+L\+CS $\ast$ 24 looks like an error, each \hyperlink{tlc__config_8h_a01153a2052cd531a30dd05472a909cb6}{G\+S\+\_\+\+D\+UO} is 3 bytes). The array would have to be expanded if \hyperlink{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}{N\+U\+M\+\_\+\+T\+L\+CS} != 1.
+
+The format of the grayscale array is explained in \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gs\+Array} & A progmem array of grayscale data. \\
+\hline
+\end{DoxyParams}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+set\+Servo@{tlc\+\_\+set\+Servo}}
+\index{tlc\+\_\+set\+Servo@{tlc\+\_\+set\+Servo}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+set\+Servo(\+T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E channel, uint8\+\_\+t angle)}{tlc_setServo(TLC_CHANNEL_TYPE channel, uint8_t angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void tlc\+\_\+set\+Servo (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE}}]{channel, }
+\item[{uint8\+\_\+t}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga813d2236e395bc29a66908fd683f61fc}{}\label{group__ExtendedFunctions_ga813d2236e395bc29a66908fd683f61fc}
+
+
+Sets a servo on channel to angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & which channel to set \\
+\hline
+{\em angle} & (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE) \\
+\hline
+\end{DoxyParams}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+shift\+Down@{tlc\+\_\+shift\+Down}}
+\index{tlc\+\_\+shift\+Down@{tlc\+\_\+shift\+Down}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+shift\+Down(uint16\+\_\+t top\+Value)}{tlc_shiftDown(uint16_t topValue)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t tlc\+\_\+shift\+Down (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{top\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_gaed782802c116fdd531198281b196908b}{}\label{group__ExtendedFunctions_gaed782802c116fdd531198281b196908b}
+
+
+Shifts all the channel data down (O\+UT 15 -\/$>$ O\+UT 14 ...). 
+
+Needs a Tlc.\+update() after. 
+\begin{DoxyParams}{Parameters}
+{\em top\+Value} & the value of Tlc (n) channel 15. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value that was shifted off the bottom (O\+U\+T0) 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+shift\+Up@{tlc\+\_\+shift\+Up}}
+\index{tlc\+\_\+shift\+Up@{tlc\+\_\+shift\+Up}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+shift\+Up(uint16\+\_\+t zero\+Value)}{tlc_shiftUp(uint16_t zeroValue)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t tlc\+\_\+shift\+Up (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{zero\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_gad499bc0e483c5b25efb839ade79bcaa0}{}\label{group__ExtendedFunctions_gad499bc0e483c5b25efb839ade79bcaa0}
+
+
+Shifts all the channel data up (O\+U\+T0 becomes O\+U\+T1 ...). 
+
+Needs a Tlc.\+update() after. 
+\begin{DoxyParams}{Parameters}
+{\em zero\+Value} & the value of channel 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value that was shifted off the end (O\+U\+T15) 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+update\+Fades@{tlc\+\_\+update\+Fades}}
+\index{tlc\+\_\+update\+Fades@{tlc\+\_\+update\+Fades}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+update\+Fades()}{tlc_updateFades()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+update\+Fades (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga48d61decbeb32b4b31c0e82097e69577}{}\label{group__ExtendedFunctions_ga48d61decbeb32b4b31c0e82097e69577}
+
+
+Updates fades using millis() 
+
+\begin{DoxyReturn}{Returns}
+0 if there are no fades left in the buffer. 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+update\+Fades@{tlc\+\_\+update\+Fades}}
+\index{tlc\+\_\+update\+Fades@{tlc\+\_\+update\+Fades}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+update\+Fades(uint32\+\_\+t current\+Millis)}{tlc_updateFades(uint32_t currentMillis)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+update\+Fades (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{current\+Millis}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_gaa3da29446480ef76d5c2a26ef97b1884}{}\label{group__ExtendedFunctions_gaa3da29446480ef76d5c2a26ef97b1884}
+
+
+Updates any running fades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Millis} & the current millis() time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if there are no fades left in the buffer. 
+\end{DoxyReturn}
+\index{Extended Library Functions@{Extended Library Functions}!tlc\+\_\+val\+To\+Angle@{tlc\+\_\+val\+To\+Angle}}
+\index{tlc\+\_\+val\+To\+Angle@{tlc\+\_\+val\+To\+Angle}!Extended Library Functions@{Extended Library Functions}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+val\+To\+Angle(uint16\+\_\+t value)}{tlc_valToAngle(uint16_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+val\+To\+Angle (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ExtendedFunctions_ga0d85d1813cdd7bca0d5aeea2e00aa896}{}\label{group__ExtendedFunctions_ga0d85d1813cdd7bca0d5aeea2e00aa896}
+
+
+Converts an inverted tlc channel value (4095 -\/ 0) into an angle (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE). 
+

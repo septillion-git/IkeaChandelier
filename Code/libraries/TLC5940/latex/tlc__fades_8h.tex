@@ -1,0 +1,60 @@
+\hypertarget{tlc__fades_8h}{}\section{tlc\+\_\+fades.\+h File Reference}
+\label{tlc__fades_8h}\index{tlc\+\_\+fades.\+h@{tlc\+\_\+fades.\+h}}
+
+
+T\+LC fading functions.  
+
+
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Tlc5940.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}W\+Program.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTlc__Fade}{Tlc\+\_\+\+Fade}
+\begin{DoxyCompactList}\small\item\em Data for a single fade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tlc__fades_8h_a575ce60a5f9ead896cafb6b37b3b5f3e}{T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}~24
+\begin{DoxyCompactList}\small\item\em The default fade buffer length (24). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga48d61decbeb32b4b31c0e82097e69577}{tlc\+\_\+update\+Fades} ()
+\begin{DoxyCompactList}\small\item\em Updates fades using millis() \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_gaa3da29446480ef76d5c2a26ef97b1884}{tlc\+\_\+update\+Fades} (uint32\+\_\+t current\+Millis)
+\begin{DoxyCompactList}\small\item\em Updates any running fades. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga5af78538816f1331f3d1977b6feaa2df}{tlc\+\_\+add\+Fade} (struct \hyperlink{structTlc__Fade}{Tlc\+\_\+\+Fade} $\ast$fade)
+\begin{DoxyCompactList}\small\item\em Adds a fade to the buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_gac32743e3ae17199f6d91bea66410a6c5}{tlc\+\_\+add\+Fade} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel, int16\+\_\+t start\+Value, int16\+\_\+t end\+Value, uint32\+\_\+t start\+Millis, uint32\+\_\+t end\+Millis)
+\begin{DoxyCompactList}\small\item\em Adds a fade to the fade buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga3ba34d1e1519c8f742b364958bced96f}{tlc\+\_\+is\+Fading} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Checks to see if any fades are happening on channel. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga262446811b33d3765bf9434bebb60cff}{tlc\+\_\+remove\+Fades} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Removes any fades from the fade buffer on this channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTlc__Fade}{Tlc\+\_\+\+Fade} {\bfseries tlc\+\_\+fade\+Buffer} \mbox{[}\hyperlink{tlc__fades_8h_a575ce60a5f9ead896cafb6b37b3b5f3e}{T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}\hypertarget{tlc__fades_8h_aa05df4e17bc08f5189a986d2b06d755c}{}\label{tlc__fades_8h_aa05df4e17bc08f5189a986d2b06d755c}
+
+\item 
+uint8\+\_\+t \hyperlink{tlc__fades_8h_ad235d0635ffb7f573e2279658476fd71}{tlc\+\_\+fade\+Buffer\+Size}\hypertarget{tlc__fades_8h_ad235d0635ffb7f573e2279658476fd71}{}\label{tlc__fades_8h_ad235d0635ffb7f573e2279658476fd71}
+
+\begin{DoxyCompactList}\small\item\em The current fade buffer size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+LC fading functions. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{tlc\+\_\+fades.\+h@{tlc\+\_\+fades.\+h}!T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH@{T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}}
+\index{T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH@{T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}!tlc\+\_\+fades.\+h@{tlc\+\_\+fades.\+h}}
+\subsubsection[{\texorpdfstring{T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH}{TLC_FADE_BUFFER_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+L\+C\+\_\+\+F\+A\+D\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+TH~24}\hypertarget{tlc__fades_8h_a575ce60a5f9ead896cafb6b37b3b5f3e}{}\label{tlc__fades_8h_a575ce60a5f9ead896cafb6b37b3b5f3e}
+
+
+The default fade buffer length (24). 
+
+Uses 24$\ast$13 = 312 bytes of ram. 

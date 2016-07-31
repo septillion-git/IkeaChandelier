@@ -1,0 +1,114 @@
+\hypertarget{Tlc5940_8h}{}\section{Tlc5940.\+h File Reference}
+\label{Tlc5940_8h}\index{Tlc5940.\+h@{Tlc5940.\+h}}
+
+
+\hyperlink{classTlc5940}{Tlc5940} library header file.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}tlc\+\_\+config.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classTlc5940}{Tlc5940}
+\begin{DoxyCompactList}\small\item\em The main \hyperlink{classTlc5940}{Tlc5940} class for the entire library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Tlc5940_8h_a864646f6e0f75195c175b71c75ad7fc6}{tlc\+\_\+shift8\+\_\+init} (void)\hypertarget{Tlc5940_8h_a864646f6e0f75195c175b71c75ad7fc6}{}\label{Tlc5940_8h_a864646f6e0f75195c175b71c75ad7fc6}
+
+\begin{DoxyCompactList}\small\item\em Initializes the S\+PI module to double speed (f\+\_\+osc / 2) \end{DoxyCompactList}\item 
+void \hyperlink{Tlc5940_8h_a9254ae18ebd74436c6ac819e9f616b4c}{tlc\+\_\+shift8} (uint8\+\_\+t byte)\hypertarget{Tlc5940_8h_a9254ae18ebd74436c6ac819e9f616b4c}{}\label{Tlc5940_8h_a9254ae18ebd74436c6ac819e9f616b4c}
+
+\begin{DoxyCompactList}\small\item\em Shifts out a byte, M\+SB first. \end{DoxyCompactList}\item 
+void \hyperlink{Tlc5940_8h_aaaf27801765c21628745dedd1cf447cb}{tlc\+\_\+dc\+Mode\+Start} (void)
+\begin{DoxyCompactList}\small\item\em Switches to dot correction mode and clears any waiting grayscale latches. \end{DoxyCompactList}\item 
+void \hyperlink{Tlc5940_8h_a5f95d25cb4c36a042c2363bde7f5b6f3}{tlc\+\_\+dc\+Mode\+Stop} (void)
+\begin{DoxyCompactList}\small\item\em Switches back to grayscale mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \hyperlink{Tlc5940_8h_a5e4408cb0b93f0d5617680a8c3540242}{tlc\+\_\+need\+X\+L\+AT}
+\begin{DoxyCompactList}\small\item\em This will be true (!= 0) if update was just called and the data has not been latched in yet. \end{DoxyCompactList}\item 
+volatile void($\ast$ \hyperlink{Tlc5940_8h_a617eaf460398e7847fdbfe7944f4cf23}{tlc\+\_\+on\+Update\+Finished} )(void)
+\begin{DoxyCompactList}\small\item\em Some of the extened library will need to be called after a successful update. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data} \mbox{[}\hyperlink{tlc__config_8h_aa673c2d8e04c9cca25f51d6c2b516b8f}{N\+U\+M\+\_\+\+T\+L\+CS} $\ast$24\mbox{]}
+\begin{DoxyCompactList}\small\item\em Packed grayscale data, 24 bytes (16 $\ast$ 12 bits) per T\+LC. \end{DoxyCompactList}\item 
+\hyperlink{classTlc5940}{Tlc5940} \hyperlink{Tlc5940_8h_a4a520693b05c8dcd19ef500540a8b75e}{Tlc}
+\begin{DoxyCompactList}\small\item\em Preinstantiated Tlc variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classTlc5940}{Tlc5940} library header file. 
+
+
+
+\subsection{Function Documentation}
+\index{Tlc5940.\+h@{Tlc5940.\+h}!tlc\+\_\+dc\+Mode\+Start@{tlc\+\_\+dc\+Mode\+Start}}
+\index{tlc\+\_\+dc\+Mode\+Start@{tlc\+\_\+dc\+Mode\+Start}!Tlc5940.\+h@{Tlc5940.\+h}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+dc\+Mode\+Start(void)}{tlc_dcModeStart(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void tlc\+\_\+dc\+Mode\+Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Tlc5940_8h_aaaf27801765c21628745dedd1cf447cb}{}\label{Tlc5940_8h_aaaf27801765c21628745dedd1cf447cb}
+
+
+Switches to dot correction mode and clears any waiting grayscale latches. 
+
+\index{Tlc5940.\+h@{Tlc5940.\+h}!tlc\+\_\+dc\+Mode\+Stop@{tlc\+\_\+dc\+Mode\+Stop}}
+\index{tlc\+\_\+dc\+Mode\+Stop@{tlc\+\_\+dc\+Mode\+Stop}!Tlc5940.\+h@{Tlc5940.\+h}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+dc\+Mode\+Stop(void)}{tlc_dcModeStop(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void tlc\+\_\+dc\+Mode\+Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{Tlc5940_8h_a5f95d25cb4c36a042c2363bde7f5b6f3}{}\label{Tlc5940_8h_a5f95d25cb4c36a042c2363bde7f5b6f3}
+
+
+Switches back to grayscale mode. 
+
+
+
+\subsection{Variable Documentation}
+\index{Tlc5940.\+h@{Tlc5940.\+h}!Tlc@{Tlc}}
+\index{Tlc@{Tlc}!Tlc5940.\+h@{Tlc5940.\+h}}
+\subsubsection[{\texorpdfstring{Tlc}{Tlc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tlc5940} Tlc}\hypertarget{Tlc5940_8h_a4a520693b05c8dcd19ef500540a8b75e}{}\label{Tlc5940_8h_a4a520693b05c8dcd19ef500540a8b75e}
+
+
+Preinstantiated Tlc variable. 
+
+\index{Tlc5940.\+h@{Tlc5940.\+h}!tlc\+\_\+\+G\+S\+Data@{tlc\+\_\+\+G\+S\+Data}}
+\index{tlc\+\_\+\+G\+S\+Data@{tlc\+\_\+\+G\+S\+Data}!Tlc5940.\+h@{Tlc5940.\+h}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+\+G\+S\+Data}{tlc_GSData}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t tlc\+\_\+\+G\+S\+Data\mbox{[}{\bf N\+U\+M\+\_\+\+T\+L\+CS} $\ast$24\mbox{]}}\hypertarget{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{}\label{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}
+
+
+Packed grayscale data, 24 bytes (16 $\ast$ 12 bits) per T\+LC. 
+
+Format\+: Lets assume we have 2 T\+L\+Cs, A and B, daisy-\/chained with the S\+O\+UT of A going into the S\+IN of B.
+\begin{DoxyItemize}
+\item byte 0\+: upper 8 bits of B.\+15
+\item byte 1\+: lower 4 bits of B.\+15 and upper 4 bits of B.\+14
+\item byte 2\+: lower 8 bits of B.\+0
+\item ...
+\item byte 24\+: upper 8 bits of A.\+15
+\item byte 25\+: lower 4 bits of A.\+15 and upper 4 bits of A.\+14
+\item ...
+\item byte 47\+: lower 8 bits of A.\+0
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Normally packing data like this is bad practice. But in this situation, shifting the data out is really fast because the format of the array is the same as the format of the T\+LC\textquotesingle{}s serial interface. 
+\end{DoxyNote}
+\index{Tlc5940.\+h@{Tlc5940.\+h}!tlc\+\_\+need\+X\+L\+AT@{tlc\+\_\+need\+X\+L\+AT}}
+\index{tlc\+\_\+need\+X\+L\+AT@{tlc\+\_\+need\+X\+L\+AT}!Tlc5940.\+h@{Tlc5940.\+h}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+need\+X\+L\+AT}{tlc_needXLAT}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t tlc\+\_\+need\+X\+L\+AT}\hypertarget{Tlc5940_8h_a5e4408cb0b93f0d5617680a8c3540242}{}\label{Tlc5940_8h_a5e4408cb0b93f0d5617680a8c3540242}
+
+
+This will be true (!= 0) if update was just called and the data has not been latched in yet. 
+
+\index{Tlc5940.\+h@{Tlc5940.\+h}!tlc\+\_\+on\+Update\+Finished@{tlc\+\_\+on\+Update\+Finished}}
+\index{tlc\+\_\+on\+Update\+Finished@{tlc\+\_\+on\+Update\+Finished}!Tlc5940.\+h@{Tlc5940.\+h}}
+\subsubsection[{\texorpdfstring{tlc\+\_\+on\+Update\+Finished}{tlc_onUpdateFinished}}]{\setlength{\rightskip}{0pt plus 5cm}volatile void($\ast$ tlc\+\_\+on\+Update\+Finished) (void)}\hypertarget{Tlc5940_8h_a617eaf460398e7847fdbfe7944f4cf23}{}\label{Tlc5940_8h_a617eaf460398e7847fdbfe7944f4cf23}
+
+
+Some of the extened library will need to be called after a successful update. 
+

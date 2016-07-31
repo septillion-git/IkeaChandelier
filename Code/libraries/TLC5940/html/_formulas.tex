@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{epsfig}
+\pagestyle{empty}
+\begin{document}
+$\displaystyle I_{OUT_n} = I_{max} \times \frac{DCn}{63} $
+\pagebreak
+
+$\displaystyle I_{max} = \frac{1.24V}{R_{IREF}} \times 31.5 = \frac{39.06}{R_{IREF}} $
+\pagebreak
+
+$\displaystyle f_{PWM} = \frac{f_{osc}}{2 * TLC\_PWM\_PERIOD} Hz $
+\pagebreak
+
+$\displaystyle TLC\_PWM\_PERIOD = \frac{f_{osc}}{2 * f_{PWM}} $
+\pagebreak
+
+$\displaystyle TLC\_PWM\_PERIOD = \frac{(TLC\_GSCLK\_PERIOD + 1) * 4096}{2} $
+\pagebreak
+
+$\displaystyle TLC\_GSCLK\_PERIOD = \frac{2 * TLC\_PWM\_PERIOD}{4096} - 1 $
+\pagebreak
+
+$\displaystyle f_{PWM} = \frac{f_{osc}}{2 * 8 * SERVO\_TIMER1\_TOP} $
+\pagebreak
+
+$\displaystyle SERVO\_TIMER2\_TOP = \frac{2 * 8 * SERVO\_TIMER1\_TOP}{4096} - 1 $
+\pagebreak
+
+\end{document}

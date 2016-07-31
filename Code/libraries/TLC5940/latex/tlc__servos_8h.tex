@@ -1,0 +1,78 @@
+\hypertarget{tlc__servos_8h}{}\section{tlc\+\_\+servos.\+h File Reference}
+\label{tlc__servos_8h}\index{tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}}
+
+
+T\+LC servo functions.  
+
+
+{\ttfamily \#include \char`\"{}Tlc5940.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tlc__servos_8h_a546558e3ca760d619e3544e8dafe5ba0}{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE}~180
+\begin{DoxyCompactList}\small\item\em The maximum angle of the servo. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__servos_8h_ac8e87e897605666a93cfef211327db2e}{S\+E\+R\+V\+O\+\_\+\+M\+I\+N\+\_\+\+W\+I\+D\+TH}~204
+\begin{DoxyCompactList}\small\item\em The 1ms pulse width for zero degrees (0 -\/ 4095). \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__servos_8h_a814916f7ade39738e0ad52b875d0ce62}{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+W\+I\+D\+TH}~410
+\begin{DoxyCompactList}\small\item\em The 2ms pulse width for 180 degrees (0 -\/ 4095). \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__servos_8h_af38d369b9c3690d07dcded626bfe9777}{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP}~20000
+\begin{DoxyCompactList}\small\item\em The top value for X\+L\+AT and B\+L\+A\+NK pulses. \end{DoxyCompactList}\item 
+\#define \hyperlink{tlc__servos_8h_ab0736c47000a7f904f953f3f0a0114b7}{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R2\+\_\+\+T\+OP}~77
+\begin{DoxyCompactList}\small\item\em The top value for G\+S\+C\+LK pulses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__ExtendedFunctions_gafda382e9cf45520a6a5d6ae866785db8}{tlc\+\_\+init\+Servos} (uint8\+\_\+t init\+Angle)
+\begin{DoxyCompactList}\small\item\em Initializes the tlc. \end{DoxyCompactList}\item 
+void \hyperlink{group__ExtendedFunctions_ga813d2236e395bc29a66908fd683f61fc}{tlc\+\_\+set\+Servo} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel, uint8\+\_\+t angle)
+\begin{DoxyCompactList}\small\item\em Sets a servo on channel to angle. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga8cac1e00c8fe44fdfe71ed7623440df2}{tlc\+\_\+get\+Servo} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Gets the current angle that channel is set to. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ExtendedFunctions_ga4583e7fd6068bc60670fa1d8213b7058}{tlc\+\_\+angle\+To\+Val} (uint8\+\_\+t angle)
+\begin{DoxyCompactList}\small\item\em Converts and angle (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE) to the inverted tlc channel value (4095 -\/ 0). \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__ExtendedFunctions_ga0d85d1813cdd7bca0d5aeea2e00aa896}{tlc\+\_\+val\+To\+Angle} (uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Converts an inverted tlc channel value (4095 -\/ 0) into an angle (0 -\/ S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+LC servo functions. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}!S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE@{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE}}
+\index{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE@{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE}!tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE}{SERVO_MAX_ANGLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+A\+N\+G\+LE~180}\hypertarget{tlc__servos_8h_a546558e3ca760d619e3544e8dafe5ba0}{}\label{tlc__servos_8h_a546558e3ca760d619e3544e8dafe5ba0}
+
+
+The maximum angle of the servo. 
+
+\index{tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}!S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+W\+I\+D\+TH@{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+W\+I\+D\+TH}}
+\index{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+W\+I\+D\+TH@{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+W\+I\+D\+TH}!tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+W\+I\+D\+TH}{SERVO_MAX_WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+R\+V\+O\+\_\+\+M\+A\+X\+\_\+\+W\+I\+D\+TH~410}\hypertarget{tlc__servos_8h_a814916f7ade39738e0ad52b875d0ce62}{}\label{tlc__servos_8h_a814916f7ade39738e0ad52b875d0ce62}
+
+
+The 2ms pulse width for 180 degrees (0 -\/ 4095). 
+
+\index{tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}!S\+E\+R\+V\+O\+\_\+\+M\+I\+N\+\_\+\+W\+I\+D\+TH@{S\+E\+R\+V\+O\+\_\+\+M\+I\+N\+\_\+\+W\+I\+D\+TH}}
+\index{S\+E\+R\+V\+O\+\_\+\+M\+I\+N\+\_\+\+W\+I\+D\+TH@{S\+E\+R\+V\+O\+\_\+\+M\+I\+N\+\_\+\+W\+I\+D\+TH}!tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+M\+I\+N\+\_\+\+W\+I\+D\+TH}{SERVO_MIN_WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+R\+V\+O\+\_\+\+M\+I\+N\+\_\+\+W\+I\+D\+TH~204}\hypertarget{tlc__servos_8h_ac8e87e897605666a93cfef211327db2e}{}\label{tlc__servos_8h_ac8e87e897605666a93cfef211327db2e}
+
+
+The 1ms pulse width for zero degrees (0 -\/ 4095). 
+
+\index{tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}!S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP@{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP}}
+\index{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP@{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP}!tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP}{SERVO_TIMER1_TOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP~20000}\hypertarget{tlc__servos_8h_af38d369b9c3690d07dcded626bfe9777}{}\label{tlc__servos_8h_af38d369b9c3690d07dcded626bfe9777}
+
+
+The top value for X\+L\+AT and B\+L\+A\+NK pulses. 
+
+This is with the div8 prescale, so $\displaystyle f_{PWM} = \frac{f_{osc}}{2 * 8 * SERVO\_TIMER1\_TOP} $ The default is 20000, which corresponds to 50\+Hz. \index{tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}!S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R2\+\_\+\+T\+OP@{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R2\+\_\+\+T\+OP}}
+\index{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R2\+\_\+\+T\+OP@{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R2\+\_\+\+T\+OP}!tlc\+\_\+servos.\+h@{tlc\+\_\+servos.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R2\+\_\+\+T\+OP}{SERVO_TIMER2_TOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R2\+\_\+\+T\+OP~77}\hypertarget{tlc__servos_8h_ab0736c47000a7f904f953f3f0a0114b7}{}\label{tlc__servos_8h_ab0736c47000a7f904f953f3f0a0114b7}
+
+
+The top value for G\+S\+C\+LK pulses. 
+
+Related to S\+E\+R\+V\+O\+\_\+\+T\+I\+M\+E\+R1\+\_\+\+T\+OP by $\displaystyle SERVO\_TIMER2\_TOP = \frac{2 * 8 * SERVO\_TIMER1\_TOP}{4096} - 1 $ The default is 77. 

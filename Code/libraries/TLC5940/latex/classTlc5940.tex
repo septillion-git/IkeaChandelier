@@ -1,0 +1,41 @@
+\hypertarget{classTlc5940}{}\section{Tlc5940 Class Reference}
+\label{classTlc5940}\index{Tlc5940@{Tlc5940}}
+
+
+The main \hyperlink{classTlc5940}{Tlc5940} class for the entire library.  
+
+
+
+
+{\ttfamily \#include $<$Tlc5940.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__CoreFunctions_gaa42fdda37a43a13f49b00924d93eedd4}{init} (uint16\+\_\+t initial\+Value=0)
+\begin{DoxyCompactList}\small\item\em Pin i/o and Timer setup. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_ga5e5acd62f0c91579694ed4cffd88bd76}{clear} (void)
+\begin{DoxyCompactList}\small\item\em Clears the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}, but does not shift in any data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__CoreFunctions_ga18ee51310250855d75cff715a5ff4d48}{update} (void)
+\begin{DoxyCompactList}\small\item\em Shifts in the data from the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_ga3d487c503365fa5b948b6711b9dac73e}{set} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets channel to value in the grayscale data array, \hyperlink{Tlc5940_8h_a1560009c42233131f7abe72e8113f793}{tlc\+\_\+\+G\+S\+Data}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__CoreFunctions_gac712fcd944dd3f5f4f0ff158d754ea06}{get} (\hyperlink{tlc__config_8h_ab23dc44a3be02131509f5ab61f68530e}{T\+L\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE} channel)
+\begin{DoxyCompactList}\small\item\em Gets the current grayscale value for a channel. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_gacb63767b2063823e9c5d0e1d8db77ceb}{set\+All} (uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets all channels to value. \end{DoxyCompactList}\item 
+void \hyperlink{group__CoreFunctions_ga5b39a8719693ebb40aaa1005ab6c7323}{set\+All\+DC} (uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the dot correction for all channels to value. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__CoreFunctions_ga732323bcfa69b08c39485866d692704a}{read\+X\+E\+RR} (void)
+\begin{DoxyCompactList}\small\item\em Checks for shorted/broken L\+E\+Ds reported by any of the T\+L\+Cs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main \hyperlink{classTlc5940}{Tlc5940} class for the entire library. 
+
+An instance of this class will be preinstantiated as Tlc. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Tlc5940_8h}{Tlc5940.\+h}\item 
+\hyperlink{Tlc5940_8cpp}{Tlc5940.\+cpp}\end{DoxyCompactItemize}
