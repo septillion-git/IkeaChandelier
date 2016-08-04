@@ -133,7 +133,7 @@ U 1 1 579CA37E
 P 5750 3100
 F 0 "JP1" H 5750 3180 50  0000 C CNN
 F 1 "Jumper_NC_Small" H 5760 3040 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5750 3100 50  0001 C CNN
+F 2 "septillion_device:SMD_jumper2" H 5750 3100 50  0001 C CNN
 F 3 "" H 5750 3100 50  0000 C CNN
 	1    5750 3100
 	1    0    0    -1  
