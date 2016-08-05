@@ -14,8 +14,8 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal hide)
-    (31 B.Cu signal hide)
+    (0 F.Cu signal)
+    (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -69,7 +69,7 @@
     (visible_elements 7FFFFF7F)
     (pcbplotparams
       (layerselection 0x010f0_80000001)
-      (usegerberextensions false)
+      (usegerberextensions true)
       (excludeedgelayer true)
       (linewidth 0.100000)
       (plotframeref false)
@@ -1317,11 +1317,11 @@
       (xy -1.51384 2.24536)) (layer F.SilkS) (width 0.00254))
   )
 
-  (module septillion_device:SMD_jumper2 (layer F.Cu) (tedit 57A25B64) (tstamp 57A25C0F)
+  (module septillion_device:SMD_jumper2 (layer F.Cu) (tedit 57A34060) (tstamp 57A25C0F)
     (at 90.32 81.905)
     (path /579CA37E)
-    (fp_text reference JP1 (at 0 2.54 90) (layer F.SilkS)
-      (effects (font (thickness 0.3)))
+    (fp_text reference JP1 (at 0 1.27 180) (layer F.SilkS)
+      (effects (font (size 0.8 0.8) (thickness 0.15)))
     )
     (fp_text value Jumper_NC_Small (at 3.556 6.096) (layer F.SilkS) hide
       (effects (font (thickness 0.3)))
